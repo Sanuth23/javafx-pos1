@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="customerPane" prefHeight="519.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <TextField fx:id="txtId" layoutX="36.0" layoutY="70.0" prefHeight="26.0" prefWidth="90.0" />
+      <TextField fx:id="txtName" layoutX="160.0" layoutY="70.0" prefHeight="26.0" prefWidth="188.0" />
+      <TextField fx:id="txtAddress" layoutX="379.0" layoutY="70.0" prefHeight="26.0" prefWidth="188.0" />
+      <TextField fx:id="txtSalary" layoutX="596.0" layoutY="70.0" prefHeight="26.0" prefWidth="155.0" />
+      <Label layoutX="37.0" layoutY="53.0" prefHeight="18.0" prefWidth="78.0" text="Customer ID" />
+      <Label layoutX="160.0" layoutY="53.0" prefHeight="18.0" prefWidth="106.0" text="Customer Name" />
+      <Label layoutX="379.0" layoutY="53.0" prefHeight="18.0" prefWidth="106.0" text="Customer Address" />
+      <Label layoutX="596.0" layoutY="53.0" prefHeight="18.0" prefWidth="106.0" text="Customer Salary" />
+      <Button layoutX="691.0" layoutY="117.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #0766AD;" text="Save" textFill="WHITE" />
+      <Button layoutX="692.0" layoutY="476.0" mnemonicParsing="false" onAction="#reloadButtonOnAction" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #175e1e;" text="Reload" textFill="WHITE" />
+      <TableView fx:id="tblCustomer" layoutX="32.0" layoutY="164.0" prefHeight="302.0" prefWidth="727.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="114.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="177.0" text="Name" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="187.0" text="Address" />
+            <TableColumn fx:id="colSalary" minWidth="0.0" prefWidth="132.0" text="Salary" />
+            <TableColumn fx:id="colOption" minWidth="0.0" prefWidth="99.0" text="Option" />
+        </columns>
+      </TableView>
+      <Button layoutX="614.0" layoutY="117.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #FA7070;" text="Update" textFill="WHITE" />
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="24.0" layoutY="10.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="38.0" prefWidth="43.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/imgBackButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+       <TextField fx:id="txtSearch" layoutX="35.0" layoutY="125.0" prefHeight="27.0" prefWidth="348.0" promptText="Search" />
+   </children>
+</AnchorPane>
